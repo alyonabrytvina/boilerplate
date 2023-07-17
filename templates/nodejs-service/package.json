@@ -1,0 +1,39 @@
+{
+  "name": "nodejs-service",
+  "version": "0.0.1",
+  "description": "NodeJS starter kit for a quick start project with Jest, ESLint, Prettier, Swagger, and environment variables",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js --ignore test",
+    "test": "NODE_ENV=test jest --coverage"
+  },
+  "keywords": [
+    "eslint",
+    "prettier",
+    "jest",
+    "swagger",
+    "environment",
+    "variables"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "swagger-ui-express": "^4.6.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "swagger-jsdoc": "^6.2.8"
+  }
+}
