@@ -94,7 +94,7 @@ export async function main() {
         const repoPath = getRepoPath(options.kit);
         const destPath = path.join(process.cwd(), options.name);
         const {packageManager} = packageOptions;
-
+        console.log(repoPath, 'repoPath');
         const emitter = degit(repoPath, {
             cache: false,
             force: true,
@@ -123,7 +123,7 @@ export async function main() {
                 await initNodeProject(packageJsonPath, destPath, options);
             }
 
-            const packageCommand = `https://raw.githubusercontent.com/alyonabrytvina/boilerplate/master/templates/${options.kit}/package.json`;
+            const packageCommand = `https://raxw.githubusercontent.com/alyonabrytvina/boilerplate/master/templates/${options.kit}/package.json`;
             const res = await fetch(packageCommand);
 
             if (res.ok) {
@@ -146,9 +146,10 @@ export async function main() {
                 )}`);
             }
         } catch (err: unknown) {
-            throw new Error(
-                'Failed to initialize the starter kit. This probably means that you provided an invalid kit name.',
-            );
+            console.log(` ${chalk.bold((err))}`)
+            // throw new Error(
+            //     'Failed to initialize the starter kit. This probably means that you provided an invalid kit name.',
+            // );
         }
     }
 

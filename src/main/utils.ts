@@ -29,6 +29,7 @@ export async function initGitRepo(
 ): Promise<void> {
     return new Promise<void>((resolve, reject) => {
         exec(`cd ${path} && git init && ${packageManager} install`, (error) => {
+            console.error(error, 'error2')
             if (error) {
                 reject(error);
             } else {
