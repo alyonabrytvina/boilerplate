@@ -146,10 +146,7 @@ export async function main() {
                 )}`);
             }
         } catch (err: unknown) {
-            console.log(` ${chalk.bold((err))}`)
-            // throw new Error(
-            //     'Failed to initialize the starter kit. This probably means that you provided an invalid kit name.',
-            // );
+            console.error('An error occurred:', err);
         }
     }
 
